@@ -50,9 +50,9 @@
 # print(f'O resultado da potência é {resultado}')
 
 # 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
-grau_celcius = float(input('Digite um a temperatura em graus Celcius: '))
-grau_fahrenheit = (grau_celcius * 9/5) + 32
-print(f'O temperatura em graus Fahrenheit é {grau_fahrenheit}')
+# grau_celcius = float(input('Digite um a temperatura em graus Celcius: '))
+# grau_fahrenheit = (grau_celcius * 9/5) + 32
+# print(f'O temperatura em graus Fahrenheit é {grau_fahrenheit}')
 
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
 
@@ -70,12 +70,48 @@ print(f'O temperatura em graus Fahrenheit é {grau_fahrenheit}')
 # 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
+# numero_01 = int(input('Digite um número inteiro: '))
+# numero_02 = int(input('Digite outro número inteiro: '))
+# if numero_01 == numero_02:
+#     print('Os números digitados são iguais!')
+
+# else:
+#     print('Os números digitados são diferentes!')
+
 # 20. Escreva um programa que verifique se dois números fornecidos pelo usuário são diferentes.
+# numero_01 = int(input('Digite um número inteiro: '))
+# numero_02 = int(input('Digite outro número inteiro: '))
+# resultado_diferenca = (numero_01 != numero_02)
+
+# if numero_01 != numero_02:
+#     print(f'Os números digitados são diferentes!\n{resultado_diferenca}')
+
+# else:
+#     print(f'Os números digitados são iguais!\n{resultado_diferenca}')
+
 
 # #### try-except e if
 
 # 21: Conversor de Temperatura
+# try:
+#     grau_celcius = float(input('Digite um a temperatura em graus Celcius: '))
+#     grau_fahrenheit = (grau_celcius * 9/5) + 32
+#     print(f'O temperatura em graus Fahrenheit é {grau_fahrenheit}')
+# except ValueError:
+#     print('Por favor, digite um número válido!')
+
 # 22: Verificador de Palíndromo
+try:
+    entrada = input('Digite uma frase ou palavra: ')
+    if isinstance(entrada, str):
+        entrada_formatada = entrada.replace(' ', '').lower()
+        if entrada_formatada == entrada_formatada[:: -1]:
+            print('É um palíndromo')
+        else:
+            print('Não é um palíndromo')
+except:
+    print('Entrada inválida. Digite uma frase ou palavra!')
+
 # 23: Calculadora Simples
 # 24: Classificador de Números
 # 25: Conversão de Tipo com Validação
