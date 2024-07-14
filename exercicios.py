@@ -59,9 +59,21 @@
 # #### Strings (`str`)
 
 # 11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
+# nome = input('Digite seu nome completo: ')
+# print(f'Seu nome em letra maiúscula é {nome.title()}')
+
 # 12. Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
+# nome = input('Digite seu nome completo: ')
+# print(f'Seu nome em caixa alta é {nome.upper()}')
+
 # 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
 # 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
+# data = input('Digite uma data no formato "dd/mm/aaaa": ')
+# dia = data.split('/')[0]
+# mes = data.split('/')[1]
+# ano = data.split('/')[2]
+# print(f'O dia digitado foi {dia}, no mês {mes}, do ano de {ano}')
+
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
 
 # #### Booleanos (`bool`)
@@ -69,6 +81,17 @@
 # 16. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
 # 17. Crie um programa que receba dois valores booleanos do usuário e retorne o resultado da operação OR.
 # 18. Desenvolva um programa que peça ao usuário para inserir um valor booleano e, em seguida, inverta esse valor.
+valor_01 = input('Insira um valor booleano: ')
+if valor_01 == "True":
+    valor_01 = False
+    print(f'O valor contrário é {valor_01}')
+    
+elif valor_01 == 'False':
+    valor_01 = True
+    print(f'O valor contrário é {valor_01}')
+
+else:
+    print('Não foi inserido um valor booleano!')
 # 19. Faça um programa que compare se dois números fornecidos pelo usuário são iguais.
 # numero_01 = int(input('Digite um número inteiro: '))
 # numero_02 = int(input('Digite outro número inteiro: '))
@@ -101,17 +124,39 @@
 #     print('Por favor, digite um número válido!')
 
 # 22: Verificador de Palíndromo
-try:
-    entrada = input('Digite uma frase ou palavra: ')
-    if isinstance(entrada, str):
-        entrada_formatada = entrada.replace(' ', '').lower()
-        if entrada_formatada == entrada_formatada[:: -1]:
-            print('É um palíndromo')
-        else:
-            print('Não é um palíndromo')
-except:
-    print('Entrada inválida. Digite uma frase ou palavra!')
+# try:
+#     entrada = input('Digite uma frase ou palavra: ')
+#     if isinstance(entrada, str):
+#         entrada_formatada = entrada.replace(' ', '').lower()
+#         if entrada_formatada == entrada_formatada[:: -1]:
+#             print('É um palíndromo')
+#         else:
+#             print('Não é um palíndromo')
+# except:
+#     print('Entrada inválida. Digite uma frase ou palavra!')
 
 # 23: Calculadora Simples
+# try:
+#     numero_1 = float(input("Digite um número: "))
+#     numero_2 = float(input("Digite outro número: "))
+#     operador = input("Digite o operador (+, -, *, /): ")
+    
+#     if operador == '+':
+#         resultado = numero_1 + numero_2
+
+#     elif operador == '-':
+#         resultado = numero_1 - numero_2
+
+#     elif operador == '*':
+#         resultado = numero_1 * numero_2
+
+#     elif operador == '/' and numero_2 != 0:
+#         resultado = numero_1 / numero_2
+#     else:
+#         print("Operador inválido ou divisão por zero.")
+#     print(f'O resultado da sua operação: {resultado}')
+# except ValueError:
+#     print("Erro: Entrada inválida. Certifique-se de inserir números.")
+
 # 24: Classificador de Números
 # 25: Conversão de Tipo com Validação
