@@ -13,23 +13,13 @@ elif nome.isspace() == True:
 elif len(nome) == 0:
     print('Você digitou nada. Escreva seu nome corretamente!')
 
-
-salario = int(input('Digite seu salário: '))
-if salario.isnumeric() == False:
-    print('Você digitou um texto. Escreva seu salario corretamente!')
-    exit()
-elif salario.isspace() == True:
-    print('Você digitou um espaço em branco. Escreva seu salario corretamente!')
-    exit()
-elif len(salario) == 0:
-    print('Você digitou nada. Escreva seu salario corretamente!')
-
-
-
-
-# bonus_inicial = float(input('Digite o bônus: '))
-# bonus_inicial = bonus_inicial * 100
-# bonus_final = 1 + bonus_inicial
-# novo_salario = salario * bonus_final
-# acrescimo = novo_salario - salario
-# print(f'Neste ano tivemos um bônus de {bonus_inicial}%!\nParabéns, {nome}! Você irá receber {novo_salario} reais neste mês.\nUm acréscimo de {acrescimo} reais!')
+try:
+    salario = int(input('Digite seu salário: '))
+    bonus_inicial = float(input('Digite o bônus: '))
+    bonus_inicial = bonus_inicial * 100
+    bonus_final = 1 + bonus_inicial
+    novo_salario = salario * bonus_final
+    acrescimo = novo_salario - salario
+    print(f'Neste ano tivemos um bônus de {bonus_inicial}%!\nParabéns, {nome}! Você irá receber {novo_salario} reais neste mês.\nUm acréscimo de {acrescimo} reais!')
+except ValueError:
+    print("Erro: Entrada inválida. Certifique-se de inserir números.")
